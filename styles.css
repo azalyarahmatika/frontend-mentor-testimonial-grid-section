@@ -155,9 +155,11 @@ main {
   color: hsl(228, 45%, 44%); 
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1100px) {  
   main {
     flex-direction: column;
+    width: 100vw;
+    padding: 2rem;
   }
 }
 
@@ -165,5 +167,12 @@ main {
   .left_section_top,
   .left_section_bottom {
     flex-direction: column;
+  }
+
+  body > div {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
   }
 }
