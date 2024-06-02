@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 13px;
+}
+
+body {
+  background-color: hsl(210, 46%, 95%);
+}
+
+body > div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+main {
+  display: flex;
+  gap: 2rem;
+  width: 75vw;
+  margin: auto;
+}
+
+.left_section {
+  flex-basis: 75%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.left_section_top,
+.left_section_bottom {
+  flex-basis: 50%;
+  
+  display: flex;
+  gap: 2rem;
+}
+
+.testimonial {
+  flex-basis: 68%;
+  padding: 1.8rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.small {
+  flex-basis: 33%;
+}
+
+.white {
+  background-color: hsl(0, 0%, 100%);
+}
+
+.testimonial[id='first'] {
+  background-color: hsl(263, 55%, 52%);
+  color: hsl(0, 0%, 100%);
+}
+
+.testimonial[id='first'] .testimonial_identity p:nth-child(2),
+.testimonial[id='first'] .testimonial_comment p:nth-child(2),
+.testimonial[id='second'] .testimonial_identity p:nth-child(2),
+.testimonial[id='second'] .testimonial_comment p:nth-child(2),
+.testimonial[id='fourth'] .testimonial_identity p:nth-child(2),
+.testimonial[id='fourth'] .testimonial_comment p:nth-child(2) {
+  color:hsl(0, 0%, 81%);
+}
+
+
+.testimonial[id='third'] .testimonial_identity p:nth-child(2),
+.testimonial[id='third'] .testimonial_comment p:nth-child(2) {
+  color: hsl(219, 29%, 14%);
+}
+
+.testimonial[id='second'] {
+  background-color: hsl(217, 19%, 35%);
+  color: hsl(210, 46%, 95%);
+}
+
+.testimonial[id='fourth'] {
+  background-color: hsl(219, 29%, 14%);
+  color: hsl(0, 0%, 100%);
+}
+
+.testimonial_identity {
+  display: flex;
+  gap: 1.2rem;
+  margin-bottom: 1rem;
+
+  flex-basis: 10%;
+}
+
+.testimonial_identity p:nth-child(2){
+  font-size: 10px;
+}
+
+.testimonial_identity img {
+  height: 30px;
+  border-radius: 50%;
+}
+
+.testimonial[id='first'] .testimonial_identity img {
+  border: 2px solid hsl(0, 0%, 81%);
+}
+
+.testimonial[id='fourth'] .testimonial_identity img {
+  border:  2px solid hsl(263, 55%, 52%);
+}
+
+.testimonial[id='second'] .testimonial_identity img,
+.testimonial[id='third'] .testimonial_identity img,
+.testimonial[id='fifth'] .testimonial_identity img {
+  border: 2px solid hsl(210, 46%, 95%);
+}
+
+.testimonial_comment {
+  flex-basis: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.testimonial_identity_name p:nth-child(1) {
+  font-weight: bold;
+}
+
+.testimonial_comment p:nth-child(1) {
+  font-weight: 600;
+  font-size: 17px;
+  margin-bottom: 1rem;
+}
+
+
+.right_section {
+  flex-basis: 25%;
+}
+
+.aside {
+  height: 100%;
+}
+
+.attribution { 
+  font-size: 11px; 
+  text-align: center; 
+  margin-top: 8px;
+}
+
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (max-width: 1100px) {
+  main {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .left_section_top,
+  .left_section_bottom {
+    flex-direction: column;
+  }
+}
