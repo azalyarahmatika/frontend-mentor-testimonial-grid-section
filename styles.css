@@ -61,6 +61,7 @@ main {
 .testimonial[id='first'] {
   background-color: hsl(263, 55%, 52%);
   color: hsl(0, 0%, 100%);
+  position: relative;
 }
 
 .testimonial[id='first'] .testimonial_identity p:nth-child(2),
@@ -100,12 +101,24 @@ main {
   font-size: 10px;
 }
 
-.testimonial_identity img {
+.testimonial_identity img:not(.pattern) {
   height: 30px;
   border-radius: 50%;
 }
 
-.testimonial[id='first'] .testimonial_identity img {
+.testimonial[id='first'] .testimonial_identity,
+.testimonial[id='first'] .testimonial_comment {
+  z-index: 2;
+}
+
+.pattern {
+  position: absolute;
+  top: 0;
+  right: 20%;
+  z-index: 1;
+}
+
+.testimonial[id='first'] .testimonial_identity img:not(.pattern) {
   border: 2px solid hsl(0, 0%, 81%);
 }
 
